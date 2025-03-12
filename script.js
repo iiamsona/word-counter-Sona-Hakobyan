@@ -1,11 +1,19 @@
+letter = document.getElementById('letterCount')
+word = document.getElementById('wordCount')
+sentence = document.getElementById('sentenceCount')
+
+
 function getInputText() {
 	text = document.getElementById('text').value
-	alert(text)
+	letterCount = 0
+	for (var i = 0; i < text.length; i++) {
+	  if (text[i] != " ") {
+	  letterCount++
+	  letter.innerHTML = letterCount
+	  }
+	}
 }
 
-letter = document.getElementById('letterCount').value
-word = document.getElementById('wordCount').value
-sentence = document.getElementById('sentenceCount').value
 button = document.getElementById('done')
 
 button.addEventListener('click', function() {
